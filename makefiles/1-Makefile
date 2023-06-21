@@ -1,0 +1,14 @@
+# Compiler gcc flags
+CFLAGS = -Wall -pedantic -Werror -Wextra -std=gnu89
+CC = gcc
+SRC = main.c school.c
+
+# Compiler rules
+all: school
+
+school: $(SRC)
+	$(CC) $(CFLAGS) $(SRC) -o school
+
+.PHONY: clean
+clean:
+	rm -f *.o school
