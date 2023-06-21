@@ -1,7 +1,16 @@
+# Compiler gcc flags
+CFLAGS = -Wall -pedantic -Werror -Wextra -std=gnu89
 CC = gcc
 SRC = main.c school.c
-OBJ = $(SRC:.c≈.o)
+OBJ = $(SRC:.C=.O)
 NAME = school
 
-all: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)		
+# Compiler rules
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+.PHONY: clean
+clean:
+	rm -f *.o school
