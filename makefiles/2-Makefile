@@ -6,9 +6,7 @@ OBJ = $(SRC:.C=.O)
 NAME = school
 
 # Compiler rules
-all: $(NAME)
-
-$(NAME): $(OBJ)
+all: $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 .PHONY: clean
