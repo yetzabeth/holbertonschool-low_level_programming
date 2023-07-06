@@ -1,8 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-/** 
+/**
  * create_array - Write a function that creates an array of charsa
  * @size: unsigned int
  * @c: char
@@ -10,7 +9,6 @@
  */
 
 char *create_array(unsigned int size, char c)
-
 {
 	unsigned int i;
 	char *array;
