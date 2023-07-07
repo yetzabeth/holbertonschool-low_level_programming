@@ -12,7 +12,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	int i, j, a, b = 0;
-	char *strc = NULL;
+	char *concat = NULL;
 
 	if (s1 == (NULL))
 		return ("");
@@ -21,13 +21,13 @@ char *str_concat(char *s1, char *s2)
 
 	a = strlen(s1);
 	b = strlen(s2);
-	strc = malloc((a + b) + 1);
-	if (strc == (NULL))
+	concat = malloc(a + b + 1);
+	if (concat == NULL)
 		return (NULL);
 	for (i = 0; s1[i]; i++)
-		strc[i] = s1[i];
+		concat[i] = s1[i];
 	for (j = 0; s2[j]; j++)
-		strc[i + j] = s2[j];
-	strc[i + j] = '\0';
-	return (strc);
+		concat[i + j] = s2[j];
+	concat[i + j] = '\0';
+	return (concat);
 }
